@@ -20,11 +20,11 @@ You will get `composer/vendor/me/my-module/MyClass.php` instead of `system/modul
 **Hint for Windows users**: Symlinks on Windows require PHP 5.3+, but this is no real problem, because composer require PHP 5.3+ ;-)
 
 Installing repository root as module `my-module`:
-**Hint**: This is the implicit fallback (`system/modules/$packageName`), if no symlinks specified!
+**Hint**: This is the implicit fallback (`system/modules/$packageName`), if no sources specified!
 ```json
 {
 	"extra": {
-		"symlinks": {
+		"sources": {
 			"": "system/modules/my-module"
 		}
 	}
@@ -35,7 +35,7 @@ Installing repository sub-path `src/system/modules/my-module` as module `my-modu
 ```json
 {
 	"extra": {
-		"symlinks": {
+		"sources": {
 			"src/system/modules/my-module": "system/modules/my-module"
 		}
 	}
